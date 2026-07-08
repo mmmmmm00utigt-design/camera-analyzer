@@ -1,0 +1,81 @@
+/* ==========================================
+   1. إعدادات الصفحة والخلفية العامة
+   ========================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #050b14; /* خلفية داكنة مستقبلية */
+    color: #00f3ff;            /* لون النيون السماوي للخطوط */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+h2 {
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00f3ff; /* وهج النيون للعنوان */
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   2. حاوية الكاميرا والبث المباشر
+   ========================================== */
+.camera-container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    border: 2px solid #00f3ff;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); /* توهج حول إطار الكاميرا */
+    overflow: hidden;
+    background: #000;
+}
+
+/* ضبط عنصر الفيديو لملء الحاوية بالكامل */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* طبقة الرسم الشفافة فوق الفيديو (لوضع المربعات والنصوص) */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ==========================================
+   3. لوحة البيانات الجانبية (Overlay Data Panel)
+   ========================================== */
+.data-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(5, 11, 20, 0.85); /* خلفية شبه شفافة */
+    border: 1px solid #00f3ff;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 13px;
+    min-width: 190px;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+    pointer-events: none; /* لمنع حجب الضغط على الكاميرا */
+    backdrop-filter: blur(4px); /* تأثير الضبابية خلف اللوحة */
+}
+
+.data-item {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* نص حالة النظام والتنبيهات */
+.status-tag {
+    color: #ff0055; /* لون وردي نيون للحالات الهامة */
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff0055;
+}
