@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الكاميرا والتحليل الذكي</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.js"></script>
+    
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <h2>نظام التحليل البصري المتقدم v2.0</h2>
+
+    <div class="camera-container">
+        <video id="video" autoplay muted playsinline></video>
+        
+        <div class="data-overlay">
+            <div class="data-item">الحالة: <span id="sysStatus" class="status-tag">جاري التهيئة...</span></div>
+            <div class="data-item">الأشخاص المكتشفين: <span id="faceCount">0</span></div>
+            <div class="data-item">العمر التقريبي: <span id="age">--</span></div>
+            <div class="data-item">التعبير/المزاج: <span id="expression">--</span></div>
+        </div>
+    </div>
+
+</body>
+</html>
